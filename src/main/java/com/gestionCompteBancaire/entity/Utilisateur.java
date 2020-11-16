@@ -14,18 +14,18 @@ public class Utilisateur {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long idUtiisateur;
+	private Long idUtilisateur;
 	private String nomUtilisateur;
 	private String prenomUtilisateur;
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="utilisateur")
 	public List<Compte> comptes;
 	
 	
-	public Long getIdUtiisateur() {
-		return idUtiisateur;
+	public Long getIdUtilisateur() {
+		return idUtilisateur;
 	}
-	public void setIdUtiisateur(Long idUtiisateur) {
-		this.idUtiisateur = idUtiisateur;
+	public void setIdUtilisateur(Long idUtiisateur) {
+		this.idUtilisateur = idUtiisateur;
 	}
 	public String getNomUtilisateur() {
 		return nomUtilisateur;
@@ -50,14 +50,14 @@ public class Utilisateur {
 	}
 	public Utilisateur(Long idUtiisateur, String nomUtilisateur, String prenomUtilisateur, List<Compte> comptes) {
 		super();
-		this.idUtiisateur = idUtiisateur;
+		this.idUtilisateur = idUtiisateur;
 		this.nomUtilisateur = nomUtilisateur;
 		this.prenomUtilisateur = prenomUtilisateur;
 		this.comptes = comptes;
 	}
 	@Override
 	public String toString() {
-		return "Utilisateur [idUtiisateur=" + idUtiisateur + ", nomUtilisateur=" + nomUtilisateur
+		return "Utilisateur [idUtiisateur=" + idUtilisateur + ", nomUtilisateur=" + nomUtilisateur
 				+ ", prenomUtilisateur=" + prenomUtilisateur + ", comptes=" + comptes + "]";
 	}
 	

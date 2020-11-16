@@ -37,6 +37,6 @@ public class CompteCourantController {
 
 	@DeleteMapping("/comptescourant")
 	public void deleteCompteCourant(CompteCourant compteCourant) {
-		compteCourantService.deleteCompteCourant(compteCourant);;
+		compteCourantService.deleteCompteCourant(compteCourant);
 	}
 }
